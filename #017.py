@@ -1,0 +1,9 @@
+#Exercício Python 017: Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo. 
+#Calcule e mostre o comprimento da hipotenusa.
+from math import sqrt
+opposite_side = float(input('Enter the value of the opposite side: '))
+adjacent_side = float(input('Enter the value of the adjacent side:'))
+sum = (opposite_side**2) + (adjacent_side**2)
+h = sqrt(sum)
+
+print(f' %.2f' %h)
