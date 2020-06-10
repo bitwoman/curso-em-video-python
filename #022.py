@@ -2,7 +2,7 @@
 # - O nome com todas as letras maiúsculas e minúsculas.
 # - Quantas letras ao todo (sem considerar espaços).
 # - Quantas letras tem o primeiro nome.
-name = str(input('Enter your name: '))
+name = str(input('Enter your full name: '))
 
 print(name.upper())
 print(name.lower())
