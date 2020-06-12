@@ -21,7 +21,7 @@ elif list_numbers[1] < list_numbers[0] and list_numbers[1] < list_numbers[2]:
 elif list_numbers[2] < list_numbers[0] and list_numbers[2] < list_numbers[1]:
   smaller = list_numbers[2]
 
-# or, short way:
+# or short way:
 # bigger = max(list_numbers)
 # small = min(list_numbers)
 
