@@ -1,0 +1,95 @@
+
+# Exercício Python 045: Crie um programa que faça o computador jogar Jokenpô com você.
+from time import sleep
+from random import choice
+import emoji
+# print(emoji.emojize(':neutral_face:', use_aliases=True))
+
+points_user = 0
+points_pc = 0
+
+while True:
+    print('{:=^40}\n'.format( ' THE GAME '))
+  
+    computer = ['Stone', 'Paper', 'Scissors']
+    move_computer = choice(computer)
+
+    print('Your options are: \n[1] Stone | [2] Paper | [3] Scissors\n')
+    move_user = int(input('Which is your move? '))
+
+    if not move_user == 0 and not move_user == 1 and not move_user == 2:
+      print('INVALID MOVE! Try another option again!')
+      exit = int(input('Do you want to go out? Enter X. \nElse, continue game typing C.'))
+      if exit == 'x' or exit == 'X': 
+        break
+      elif exit == 'c' or exit == 'C':
+        continue 
+      else:
+        break
+    else:
+      print('JO')
+      sleep(1)
+      print('KEN')
+      sleep(1)
+      print('PO!')
+      print('=========================')
+
+      stone = emoji.emojize(':punch:', use_aliases=True)
+      paper = emoji.emojize(':hand:', use_aliases=True)
+      scissors = emoji.emojize(':v:', use_aliases=True)
+
+      if move_computer == 'Stone':
+        print(f'Computer threw {stone}')
+      elif move_computer == 'Paper':
+        print(f'Computer threw {paper}')
+      else:
+        print(f'Computer threw {scissors}')
+
+      if move_user == 0:
+        print(f'You threw {stone}')
+      elif move_user == 1:
+        print(f'You threw {paper}')
+      elif move_user == 2:
+        print(f'You threw {scissors}')
+
+      print('=========================')
+
+      if move_computer == 'Stone' and move_user == 1:
+        print('Congratulations! You won!')
+        points_user += 1
+        
+        print(f'SCOREBOARD: \nComputer: [{points_pc}] X User: [{points_user}]')
+      elif move_computer == 'Stone' and move_user == 2:        
+        print('Computer won!')
+        points_pc += 1
+        
+        print(f'SCOREBOARD: \nComputer: [{points_pc}] X User: [{points_user}]')
+      elif move_computer == 'Stone' and move_user == 0:
+        print('The game tied')
+        print(f'SCOREBOARD: \nComputer: [{points_pc}] X User: [{points_user}]')
+      elif move_computer == 'Paper' and move_user == 0:
+        print("Computer won!")
+        points_pc += 1
+        
+        print(f'SCOREBOARD: \nComputer: [{points_pc}] X User: [{points_user}]')
+      elif move_computer == 'Paper' and move_user == 2:
+        print('Congratulations! You won!')
+        points_user += 1
+        
+        print(f'SCOREBOARD: \nComputer: [{points_pc}] X User: [{points_user}]')
+      elif move_computer == 'Paper' and move_user == 1:
+        print('The game tied')
+        print(f'SCOREBOARD: \nComputer: [{points_pc}] X User: [{points_user}]')
+      elif move_computer == 'Scissors' and move_user == 1:
+        print("Computer won!")
+        points_pc += 1
+        
+        print(f'SCOREBOARD: \n Computer: [{points_pc}] X User: [{points_user}]')
+      elif move_computer == 'Scissors' and move_user == 0:
+        print('Congratulations! You won!')
+        points_user += 1
+        
+        print(f'SCOREBOARD: \n Computer: [{points_pc}] X User: [{points_user}]')
+      elif move_computer == 'Scissors' and move_user == 2:
+        print('The game tied')
+        print(f'SCOREBOARD: \nComputer: [{points_pc}] X User: [{points_user}]')
