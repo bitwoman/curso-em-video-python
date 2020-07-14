@@ -8,4 +8,4 @@ while sex != 'M' and sex != 'F':
   if sex != 'M' and sex != 'F':
     sex = str(input('Invalid. Please, enter your sex: ')).upper()
 
-print(f'Sexo {sex} registred with success.')
+print(f'Sex {sex} registred with success.')
