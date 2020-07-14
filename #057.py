@@ -3,9 +3,9 @@
 sex = ''
 
 while sex != 'M' and sex != 'F':
-  sex = str(input('Informe seu sexo: ')).upper()
+  sex = str(input('Enter your sex: ')).upper()
 
   if sex != 'M' and sex != 'F':
-    sex = str(input('Dados inválidos. Por favor, informe seu sexo: ')).upper()
+    sex = str(input('Invalid. Please, enter your sex: ')).upper()
 
-print(f'Sexo {sex} registrado com sucesso.')
+print(f'Sexo {sex} registred with success.')
