@@ -18,5 +18,8 @@ for n in range(0, len(randomNumbers)):
       if randomNumbers[n] < smaller:
         smaller = randomNumbers[n]
 
-print(f'\nBigger number: {bigger}')
-print(f'Smaller number: {smaller}')
+indexBigger = randomNumbers.index(bigger, 0, len(randomNumbers))
+indexSmaller = randomNumbers.index(smaller, 0, len(randomNumbers))
+
+print(f'\nBigger number: {bigger} and his position: {indexBigger}')
+print(f'Smaller number: {smaller} and his position: {indexSmaller}')
