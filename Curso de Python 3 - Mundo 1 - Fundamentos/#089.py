@@ -6,7 +6,7 @@ realList = []
 auxList = []
 
 print('-=' * 20)
-print(' '*15, 'BOLETIM')
+print(' '*15, 'School Report')
 print('-=' * 20)
 
 while True:
@@ -23,7 +23,7 @@ while True:
     print('-='*20)
     break
 
-print(f'{"No.":<4}{"NOME":<10}{"MÉDIA":>8}')
+print(f'{"No.":<4}{"NAME":<10}{"AVERAGE":>8}')
 print('-='*20)
 
 for i, x in enumerate(auxList):
@@ -38,6 +38,6 @@ while True:
     break
 
   if(student <=len(auxList)-1):
-    print(f'Notas de {auxList[student][0]} são {auxList[student][1]}')
+    print(f'Grades of {auxList[student][0]} are {auxList[student][1]}')
 
-print('<<< VOLTE SEMPRE >>>')
+print('<<< COME BACK ALWAYS >>>')
